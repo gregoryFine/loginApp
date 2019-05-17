@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_launcher_background"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="100dp"
+            android:src="@mipmap/ic_launcher" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:background="@drawable/fuck_edge_circle"
+            >
+
+            <EditText
+                android:id="@+id/username"
+                android:layout_width="300dp"
+                android:layout_height="35dp"
+                android:background="@null"
+                android:hint="请输入账号"
+                android:textColorHint="#000000"
+                android:padding="5dp"
+                android:inputType="number"
+                android:maxLines="1"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/holo_orange_light" />
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="300dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="10dp"
+                android:background="@null"
+                android:hint="请输入密码"
+                android:textColorHint="#000000"
+                android:padding="5dp"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/loginBtn"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:text="登录"
+            android:textColor="#000000"
+            android:textSize="19sp"
+            android:gravity="center"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/only_edge_circle"
+            />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="记住密码"
+            android:textColor="#ffffff"
+            android:textSize="19sp"
+            android:layout_marginTop="10dp"
+            />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@android:color/holo_orange_light"
+        android:layout_alignParentBottom="true"
+
+        >
+
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:background="@mipmap/ic_launcher"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="110dp"
+            android:layout_marginTop="6dp"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="更多登录选项"
+            android:textSize="16sp"
+            android:layout_centerInParent="true"
+            />
+
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+
+</RelativeLayout>
