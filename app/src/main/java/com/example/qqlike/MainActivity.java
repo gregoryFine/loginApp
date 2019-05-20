@@ -1,5 +1,6 @@
 package com.example.qqlike;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -40,9 +41,30 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         String passwordString = password.getText().toString().trim();
         if(!TextUtils.isEmpty(usernameString) && "666666".equals(usernameString) && !TextUtils.isEmpty(passwordString) && "666666".equals(passwordString)){
             Toast.makeText(MainActivity.this, "成功", Toast.LENGTH_LONG).show();
+        }else{
+            Toast.makeText(MainActivity.this, "账号或密码不匹配，登录不成功，请重新输入", Toast.LENGTH_LONG).show();
             return;
         }
-        Toast.makeText(MainActivity.this, "不成功", Toast.LENGTH_LONG).show();
+
+
+        Student student = new Student("小明");
+        School school = new School();
+        school.setName("东明一中");
+
+
+        Bundle bundleOne = new Bundle();
+        bundleOne.putString("username", usernameString);
+        bundleOne.putString("password", passwordString);
+        bundleOne.putSerializable("student", student);
+        bundleOne.putParcelable("school", school);
+
+
+        Intent intent = new Intent(MainActivity.this, jumpActivity.class);
+        intent.putExtra("bundleOne", bundleOne);
+
+        startActivity(intent);
+
+        //finish();//销毁当前页
 
     }
 }
