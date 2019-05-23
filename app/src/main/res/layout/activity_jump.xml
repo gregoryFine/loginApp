@@ -10,6 +10,7 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:orientation="vertical"
         >
 
         <TextView
@@ -21,9 +22,14 @@
             android:textSize="30sp" />
 
 
-
+        <FrameLayout
+            android:id="@+id/containerr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></FrameLayout>
 
 
     </LinearLayout>
+
+
 
 </RelativeLayout>

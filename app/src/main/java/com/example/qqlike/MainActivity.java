@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         bundleOne.putParcelable("school", school);
 
 
-        Intent intent = new Intent(MainActivity.this, jumpActivity.class);
+        Intent intent = new Intent(MainActivity.this, ButterKnifeActivity.class);
         intent.putExtra("bundleOne", bundleOne);
 
         startActivity(intent);
